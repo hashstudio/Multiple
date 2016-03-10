@@ -28,7 +28,6 @@ abstract class MultipleOwnerAdmin extends ModelAdmin
     {
         if (!$this->_multiple) {
             $this->_multiple = [];
-            $model = $this->getModel();
 
             foreach ($this->getMultiple() as $name => $admin) {
                 $class = $admin['class'];

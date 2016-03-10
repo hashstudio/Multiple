@@ -47,6 +47,7 @@ abstract class MultipleAdmin extends ModelAdmin
 
     public $showPkColumn = false;
 
+    public $autoCollect = false;
     /**
      * @param Model $model
      * @return QuerySet
