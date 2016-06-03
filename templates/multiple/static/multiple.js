@@ -37,6 +37,7 @@
             this.options = $.extend(this.options, options);
 
             this.bind();
+            this.initSortable();
 
             return this;
         },
