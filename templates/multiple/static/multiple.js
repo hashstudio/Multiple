@@ -4,10 +4,8 @@
 
     /**
      * Описание объекта
-     */
-    var multiple = function () {
-        return multiple.init.apply(this, arguments);
-    };
+     */Co
+    var multiple = {};
 
     /**
      * Расширение объекта
@@ -29,7 +27,11 @@
          * @param options
          */
         init: function (element, options) {
+
+            console.log(this);
+
             if (element === undefined) return;
+
 
             this.element = $(element);
 
@@ -52,8 +54,6 @@
                     args = '',
                     requestPath = window.location.href,
                     delimiter = '';
-
-
 
                 if (typeof(url) === 'string') {
                     var explodedUrl = url.split('?'),
@@ -149,8 +149,7 @@
      * Инициализация функции объекта для jQuery
      */
     return $.fn.multiple = function (options) {
-        var each = jQuery.extend({}, multiple);
-        return each.init(this, options);
+        return jQuery.extend(true, {}, multiple).init(this, options);
     };
 })($);
 
